@@ -1,1 +1,19 @@
-<p>list works!</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Márka</th>
+      <th>Típus</th>
+      <th>Év</th>
+      <th>Használt-e</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of mergedCars$ | async">
+      <td>{{ car.type }}</td>
+      <td>{{ car.model }}</td>
+      <td>{{ car.year }}</td>
+      <td>{{ car.isUsed }}</td>
+      <th></th>
+    </tr>
+  </tbody>
+</table>
